@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.cy.ly.mappers.QuestionOtherMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.cy.ly.javaBean.Question">
+        <id column="ID" jdbcType="INTEGER" property="id"/>
+        <result column="TITLE" jdbcType="VARCHAR" property="title"/>
+        <result column="GMT_CREATE" jdbcType="BIGINT" property="gmtCreate"/>
+        <result column="GMT_MODIFIED" jdbcType="BIGINT" property="gmtModified"/>
+        <result column="CREATE_ID" jdbcType="INTEGER" property="createId"/>
+        <result column="COMMENT_COUNT" jdbcType="INTEGER" property="commentCount"/>
+        <result column="VIEW_COUNT" jdbcType="INTEGER" property="viewCount"/>
+        <result column="LIKE_COUNT" jdbcType="INTEGER" property="likeCount"/>
+        <result column="TAG" jdbcType="VARCHAR" property="tag"/>
+    </resultMap>
+    <select id="selectTags" parameterType="com.example.demo.cy.ly.javaBean.Question" resultMap="BaseResultMap">
+        select *
+         from question WHERE id !=#{id} and tag regexp #{tag}
+    </select>
+
+    <select id="countBySearch" parameterType="com.example.demo.cy.ly.dao.QuestionSearchDao" resultType="java.lang.Integer">
+        select count(*) from question
+        <where>
+            <if test="search != null">
+                title regexp #{search}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectBySearchWithRowbounds" parameterType="com.example.demo.cy.ly.dao.QuestionSearchDao"
+            resultMap="BaseResultMap">
+        select *
+        from question
+        <where>
+            <if test="search != null">
+                and title regexp #{search}
+            </if>
+        </where>
+        ORDER BY gmt_create DESC limit #{page},#{size}
+    </select>
+</mapper>

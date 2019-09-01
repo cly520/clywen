@@ -1,0 +1,115 @@
+body {
+    background-color: #efefef;
+}
+
+.main {
+    background-color: white;
+    margin: 30px;
+}
+
+.btn-publish {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.media-object {
+    width: 45px;
+    height: 45px;
+}
+
+.media-body {
+    padding-top: 10px;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
+
+.question-tag {
+    margin-right: 5px;
+}
+
+.profile .section {
+    margin-top: 15px;
+}
+
+.demo-menu {
+    margin-top: 10px;
+    color: #999;
+    font-size: 16px;
+}
+
+.demo-menu-2 {
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #999;
+    font-size: 16px;
+}
+
+.jumbotron {
+    margin: 50px;
+}
+
+.demo-sizes {
+    margin: 10px 0;
+    width: 1000px;
+    height: 156px;
+}
+
+.btn-demo {
+    float: right;
+    margin-right: 180px;
+    margin-bottom: 10px;
+}
+
+.btn-demo1 {
+    float: right;
+    margin: 10px 135px 10px 0px;
+}
+
+.btn-demo2 {
+    float: right;
+    margin: 10px 10px 10px 0px;
+}
+
+.comment {
+    font-size: 16px;
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+
+.comment .active {
+    color: #499ef3;
+}
+
+.comment .glyphicon:hover {
+    color: #499ef3;
+}
+
+a {
+    cursor: pointer;
+}
+
+.comment input {
+    width: 970px;
+    height: 46px;
+}
+
+.ul-demo li {
+    list-style-type: none;
+}
+.ul-demo{
+    padding-left: 20px;
+    font-size: 18px;
+}
+.label-demo{
+    margin: 0px 0px 3px 3px;
+    font-size: 15px;
+    display: inline-block;
+}
+.nav-demo{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
